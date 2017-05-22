@@ -1,25 +1,27 @@
-let campos = [
+var campos = [
   document.querySelector('#data'),
   document.querySelector('#quantidade'),
   document.querySelector('#valor')  
 ];
 
-let tbody = document.querySelector('table tbody');
+console.log(campos);
+
+var tbody = document.querySelector('table tbody');
 
 document.querySelector('.form').addEventListener('submit', function(event) {
     
    event.preventDefault();
    
-   let tr = document.createElement('tr');
+   var tr = document.createElement('tr');
    
    campos.forEach(function(campo) {
        
-       let td = document.createElement('td');
+       var td = document.createElement('td');
        td.textContent = campo.value;
        tr.appendChild(td);
    });
    
-  let tdVolume = document.createElement('td');
+  var tdVolume = document.createElement('td');
   tdVolume.textContent = campos[1].value * campos[2].value; 
   
   tr.appendChild(tdVolume);
